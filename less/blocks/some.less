@@ -1,0 +1,34 @@
+* {box-sizing: border-box;}
+:focus {outline: none;}
+
+body {
+	font-family: @font-family-base;
+	font-size: @font-size-base;
+	width: 1200px;
+	margin: 0 auto;
+	padding: 0 30px;
+	background-color: #f0f2f5;
+}
+
+.clear-fix:before {
+	content: "";
+	display: table;
+}
+
+.clear-fix:after {clear:both;}
+
+.ui-section__head {
+	font-family: "MyriadProRegular", sans-serif;
+	font-size: @font-size-h1;
+	border-bottom: 1px solid #d8dadc;
+	padding: 13px 0;
+	margin: 0;
+}
+
+.link {margin-right: 20px}
+
+.btn {
+	margin-right: 10px; 
+	margin-bottom:15px;
+}
+

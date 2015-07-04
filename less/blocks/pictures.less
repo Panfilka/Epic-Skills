@@ -1,0 +1,80 @@
+.img {
+  position:relative;
+  display: block;
+  border-radius:5px;
+  overflow:hidden;
+  font-size:0;
+}
+
+
+
+.img--condition-1:after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6) url(../pict/img-3.png) no-repeat center center;
+  visibility:hidden;
+  opacity:0;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.img--condition-1:hover:after {
+  visibility:visible;
+  opacity:1;
+}
+
+
+
+.popup {
+	position:absolute; 
+	bottom:-100%; 
+	left:0; 
+	padding:15px 20px; 
+	font-size:14px; 
+	color:#fff; 
+	background-color:rgba(0,0,0,0.6);
+	transition: all 0.3s ease-in-out;
+}
+
+
+
+.img:hover .popup {
+	bottom:0;
+}
+
+.img--condition-3 {perspective: 1000;}
+
+.img__inner {
+	width: 100%;
+	height: 258px;
+	transform-style: preserve-3d;
+	transition: all 0.5s linear;
+}
+
+.img--condition-3:hover .img__inner {
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.back {
+  display: block;
+  transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  font-size: 14px;
+  color: #353535;
+  border:1px solid #cacaca;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+}

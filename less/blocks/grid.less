@@ -1,0 +1,28 @@
+.generate-columns(@n, @i: 1) when (@i =< @n) { 
+
+.col-@{i} {
+width: (@i * 100% / @n);
+
+}
+
+.generate-columns(@n, (@i + 1));
+
+}
+
+.generate-columns(12);
+
+
+
+.row {
+	margin: 0 -18px;
+	font-size: 0;
+}
+
+
+[class*="col-"] {
+	padding: 18px;
+	display: inline-block;
+    vertical-align: top;
+    font-size: @font-size-base;
+}
+
